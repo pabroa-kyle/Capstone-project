@@ -7,13 +7,13 @@
     <link rel="shortcut icon" href="cec_logo.jpg" type="image/x-icon" />
     <title>Document</title>
     <style>
-        body {
-            background-image: url("CEC bg.jpg");;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
+      body {
+        background-image: url("CEC bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
     </style>
   </head>
   <body>
@@ -21,16 +21,31 @@
       <div class="login-container">
         <h2>Login</h2>
 
-        <form>
-          <input type="text" class="input" placeholder="ID number" required /><br>
+        <form onsubmit="login(event)">
+          <input
+            type="text"
+            class="input"
+            placeholder="ID number"
+            required
+          /><br />
           <input
             type="password"
             class="input"
             placeholder="Password"
             required
-          /><br>
-          <button type="submit">Log In</button>
+          /><br />
+
+          <button type="submit" class="login-btn">
+            <span>Log In</span>
+          </button>
         </form>
+
+        <script>
+          function login(event) {
+            event.preventDefault();
+            window.location.href = "productPage.html";
+          }
+        </script>
       </div>
     </div>
   </body>
