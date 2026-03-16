@@ -1,33 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link rel="shortcut icon" href="cec_logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="product.css">
 </head>
 <body>
-    <header>
-    <img src="cec_logo.jpg" alt="CEC Logo" class="logo">
-    <h1>CEC Merchandise Online Shop</h1>
-</header>
+  <header>
+    <nav class="navbar">
+      <div class="nav-left">
+        <img class="logo" src="cec_logo.jpg" alt="Logo not found">
+        <a href="first.html"><button>HOME PAGE</button></a>
+        <a href="second.html"><button>PRODUCTS</button></a>
+        <a href="about.html"><button>ABOUT US</button></a>
+        <a href="contact.html"><button>CONTACT US</button></a>
+      </div>
+      <div class="nav-right">
+        <a href="cart.html"><button class="icon-button" title="Cart">🛒</button></a>
+        <button class="icon-button">🔔</button>
+      </div>
+    </nav>
+  </header>
 
-<style>
-header {
-    display: flex;
-    align-items: center;
-}
+  <main>
+    <section class="product-section">
+      <h2>Products</h2>
+      <div class="product-grid">
 
-.logo {
-    width: 60px;   /* Resize logo */
-    height: auto;  /* Keep proportion */
-    margin-right: 10px;
-}
-</style>
-<center>
-    <div>
-        <input class="input" name="text" placeholder="Search..." type="search">
-    </div>
-</center>
+        <!-- Product Card Example -->
+        <div class="product-card">
+          <img src="schooluniform.jpeg" alt="CEC School Uniform" class="product-image">
+          <h3 class="product-name">CEC School Uniform</h3>
+          <p class="product-price">₱350.00</p>
+          <select class="uniformSize">
+            <option value="">Select Size</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="XL">XL</option>
+          </select>
+          <button class="product-button"
+                  onclick="addToCart('CEC School Uniform', 350, 'schooluniform.jpeg', this)">
+            ADD
+          </button>
+        </div>
+
+        <div class="product-card">
+          <img src="cecpeuniform.jpeg" alt="CEC PE Uniform T-Shirt" class="product-image">
+          <h3 class="product-name">CEC PE Uniform T-Shirt</h3>
+          <p class="product-price">₱450.00</p>
+          <select class="uniformSize">
+            <option value="">Select Size</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="XL">XL</option>
+          </select>
+          <button class="product-button"
+                  onclick="addToCart('CEC PE Uniform T-Shirt', 450, 'cecpeuniform.jpeg', this)">
+            ADD
+          </button>
+        </div>
+
+        <div class="product-card">
+          <img src="cecpeuniform.jpeg" alt="CEC PE Uniform Pants" class="product-image">
+          <h3 class="product-name">CEC PE Uniform Pants</h3>
+          <p class="product-price">₱450.00</p>
+          <select class="uniformSize">
+            <option value="">Select Size</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="XL">XL</option>
+          </select>
+          <button class="product-button"
+                  onclick="addToCart('CEC PE Uniform Pants', 450, 'cecpeuniform.jpeg', this)">
+            ADD
+          </button>
+        </div>
+
+        <div class="product-card">
+          <img src="schoollace.png" alt="CEC ID Lace" class="product-image">
+          <h3 class="product-name">CEC ID Lace</h3>
+          <p class="product-price">₱100.00</p>
+          <button class="product-button"
+                  onclick="addToCart('CEC ID Lace', 100, 'schoollace.png', this)">
+            ADD
+          </button>
+        </div>
+
+        <div class="product-card">
+          <img src="nstpuniform.jpg" alt="NSTP Uniform Shirt" class="product-image">
+          <h3 class="product-name">NSTP Uniform Shirt</h3>
+          <p class="product-price">₱200.00</p>
+          <select class="uniformSize">
+            <option value="">Select Size</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="XL">XL</option>
+          </select>
+          <button class="product-button"
+                  onclick="addToCart('NSTP Uniform Shirt', 200, 'nstpuniform.jpg', this)">
+            ADD
+          </button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <script src="product.js" defer></script>
 </body>
 </html>
