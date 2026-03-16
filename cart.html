@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart</title>
+  <link rel="shortcut icon" href="logo.jfif" type="image/x-icon">
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-left">
+        <img class="logo" src="cec_logo.jpg" alt="Logo not found">
+        <a href="first.html"><button>HOME PAGE</button></a>
+        <a href="productPage.html"><button>PRODUCTS</button></a>
+        <a href="about.html"><button>ABOUT US</button></a>
+        <a href="contact.html"><button>CONTACT US</button></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cart-section">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+
+      <h3>Total: <span id="total-price">₱0.00</span></h3>
+
+      <button id="checkout-button">Proceed to Checkout</button>
+    </section>
+  </main>
+
+  <script src="cart.js" defer></script>
+</body>
+</html>

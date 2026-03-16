@@ -1,0 +1,292 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .product-card {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+  .logo {
+    position: absolute;
+    left: 0.1%;
+    top: 1.0%;
+    width: 50px;
+    height: 50px;
+    border-bottom-left-radius: 18%;
+    border-radius: 100%;
+  }
+  
+  header {
+    background-color: #0018f9;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .header-right {
+    float: right;
+  }
+  
+  .login-link {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    padding-top: 10px;
+  }
+  
+  .product-section {
+    padding: 250px 100px;
+    text-align: center;
+    background-color: #fdf6e4;
+  }
+  
+  .product-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 100px;
+    margin-top: -50px;
+    padding: 10px 20px;
+    
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .product-card {
+    background-color: #0018f9;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .product-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #f2f2f2;
+  }
+  
+  .product-price {
+    background-color: #6b8829;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  
+  .product-button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .product-button:hover {
+    background-color: wheat;
+  }
+  
+  footer {
+    background-color: #f9d371;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .product-button {
+    font-weight: bold; /* Makes the text bold */
+    color: black; /* Changes the text color to black */
+    background-color: #b6721e; /* Keeps the brown background */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .product-button:hover:hover {
+    opacity: 0.9; /* Slight effect on hover */
+  }
+  
+  header nav {
+    flex-grow: 1; /* Allows the nav bar to take up available space */
+    display: flex;
+    justify-content: center; /* Centers the links horizontally */
+  }
+  
+  header nav a {
+    text-decoration: none;
+    margin: 0 15px; /* Adds spacing between links */
+    color: black; /* Black text color */
+    font-weight: bold; /* Bold text for navigation links */
+  }
+  
+  header .header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Spacing between icons and links */
+  }
+  
+  header .header-icons a {
+    text-decoration: none;
+    color: red; /* Red text for login/sign-in */
+    font-weight: bold; /* Bold text */
+  }
+  
+  header .header-icons a:hover {
+    text-decoration: underline; /* Adds underline on hover for login/sign-in */
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdf6e4;
+    padding: 10px 20px;
+  }
+  
+  .nav-left button,
+  .nav-right button {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 14px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-left button:hover,
+  .nav-right a:hover {
+    text-decoration: underline;
+    transform: translateY(-10px)
+  }
+  
+  .nav-right input {
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  .nav-right .icon-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .nav-right a {
+    font-size: 14px;
+    color: rgb(236, 14, 14);
+    text-decoration: none;
+  }
+
+  /* Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 50%;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cart-item {
+  margin: 10px 0;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+/* Dropdown */
+
+/* Size Label */
+label[for="size"]{
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 8px;
+    color: #ffffff;
+}
+
+/* Size Dropdown */
+#uniformSize{
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+#uniformSize:hover{
+    border-color: #007bff;
+}
+
+/* Focus Effect */
+#uniformSize:focus{
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}

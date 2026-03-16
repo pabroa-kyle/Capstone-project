@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="payout.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-left">
+          <img class="logo" src="logo.jfif" alt="error photo!" />
+          <button><a href="first.html">HOME PAGE</a></button>
+          <button><a href="second.html">PRODUCTS</a></button>
+          <button><a href="about.html">ABOUT US</a></button>
+          <button><a href="contact.html">CONTACT US</a></button>
+        </div>
+        <div class="nav-right">
+          <a href="3rd.html" class="login">Log In</a>
+          <span>|</span>
+          <a href="4th.html" class="signin">Sign In</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="payment-container">
+      <div class="payment-box">
+        <h2>Payment</h2>
+
+        <div class="payment-summary">
+          <p>Your Total: <span id="total-price">₱0.00</span></p>
+        </div>
+
+        <form id="payment-form">
+          <div class="form-group">
+            <label for="payment-method">Choose Payment Method</label>
+            <select id="payment-method" name="payment-method" required>
+              <option value="">--Select Payment Method--</option>
+              <option value="cash-on-delivery">Cash on Delivery</option>
+              <option value="e-money">GCASH</option>
+            </select>
+          </div>
+
+          <!-- Cash on Delivery Details (hidden by default) -->
+          <div
+            id="cash-on-delivery-details"
+            class="payment-details"
+            style="display: none"
+          >
+            <p>You will pay in cash upon delivery of the product.</p>
+          </div>
+
+          <!-- E-Money Details (hidden by default) -->
+          <div
+            id="e-money-details"
+            class="payment-details"
+            style="display: none"
+          >
+            <label for="e-money-account">E-Money Account Number</label>
+            <input
+              type="text"
+              id="e-money-account"
+              name="e-money-account"
+              placeholder="Enter E-Money Account"
+            />
+            <label for="account-name">Account Name</label>
+            <input
+              type="text"
+              id="account-name"
+              name="account-name"
+              placeholder="Enter Account Name"
+            />
+          </div>
+
+          <button type="submit" id="payment-button">Place Order</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="payout.js"></script>
+  </body>
+</html>
