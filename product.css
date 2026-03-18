@@ -186,7 +186,7 @@ body {
     font-size: 14px;
     margin-right: 10px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
   }
   
   .nav-left button:hover,
@@ -250,12 +250,6 @@ body {
   color: #000;
   text-decoration: none;
   cursor: pointer;
-}
-
-.cart-item {
-  margin: 10px 0;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
 }
 
 /* Dropdown */
