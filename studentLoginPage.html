@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="studen-login.css" />
+    <link rel="shortcut icon" href="cec_logo.jpg" type="image/x-icon" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url("CEC bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="login-container">
+        <h2>Login</h2>
+
+        <form id="login-form">
+
+  <input
+    type="text"
+    id="student-id"
+    class="input"
+    placeholder="ID number"
+    required
+  />
+
+  <input
+    type="password"
+    id="password"
+    class="input"
+    placeholder="Password"
+    required
+  />
+
+  <button type="submit" class="login-btn">
+    Log In
+  </button>
+
+</form>
+
+<p id="error-message" style="color:red;"></p>
+
+        <script src="student-login.js"></script>
+      </div>
+    </div>
+  </body>
+</html>

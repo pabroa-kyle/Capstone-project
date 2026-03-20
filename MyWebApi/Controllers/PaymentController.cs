@@ -7,18 +7,21 @@ public class PaymentController : ControllerBase
     [HttpPost("process")]
     public IActionResult ProcessPayment([FromBody] PaymentRequest request)
     {
-        if (request == null)
+        if (request == null || request.TotalAmount <= 0)
         {
-            return BadRequest(new { message = "Invalid request data" });
+            return BadRequest(new { message = "Invalid payment" });
         }
 
-        Console.WriteLine("Payment Method: " + request.PaymentMethod);
-        Console.WriteLine("Total Amount: " + request.TotalAmount);
-
-        if (request.TotalAmount <= 0)
+        var order = new Order
         {
-            return BadRequest(new { message = "Invalid total amount" });
-        }
+            TotalAmount = request.TotalAmount,
+            PaymentMethod = request.PaymentMethod,
+            Items = request.Items,
+            Status = "Pending"
+        };
+
+        // ✅ SAVE ORDER
+        OrderStore.Orders.Add(order);
 
         return Ok(new
         {
