@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin-dashboard.css">
+  <style>
+        body {
+            background-image: url("CEC bg.jpg");;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Admin Dashboard</h1>
+
+<button onclick="logout()">Logout</button>
+
+<h2>Orders</h2>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Total</th>
+      <th>Payment</th>
+      <th>Items</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody id="orders-table"></tbody>
+</table>
+
+<script src="admin-dashboard.js"></script>
+
+</body>
+</html>
