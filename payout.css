@@ -4,11 +4,6 @@ body {
     background-color: #fdf6e4;
   }
   
-  header {
-    background-color: #f1c40f;
-    padding: 10px 20px;
-  }
-  
   header nav ul {
     list-style-type: none;
     padding: 0;
@@ -95,7 +90,7 @@ body {
   .logo {
     position: absolute;
     left: .2%;
-    top: 1.0%;
+    top: 0.6%;
     width: 53px;
     height: 53px;
     border-bottom-left-radius: 18%;
@@ -103,8 +98,13 @@ body {
   }
   
   header {
-    background-color: #f9d371;
+    background-color: #0018f9;
     padding: 10px ;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em 1em;
   }
   
   .nav-links {
@@ -167,18 +167,6 @@ body {
     background-color: #fdf6e4;
   }
   
-  
-
-  
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffd700; /* Yellow background */
-    padding: .5em 1em;
-  }
-  
   header nav {
     flex-grow: 1; /* Allows the nav bar to take up available space */
     display: flex;
@@ -212,8 +200,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #e6b800;
-    padding: 5px 10px;
+    background-color: #fdf6e4;
+    padding: 3px 9px;
   }
   
   .nav-left button,

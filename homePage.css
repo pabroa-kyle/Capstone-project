@@ -1,0 +1,250 @@
+/* ===== GENERAL ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("CEC bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ===== LOGO ===== */
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position: absolute;
+    top: 5px;
+    left: 1px;
+    z-index: 300;
+    max-width: 100px;
+}
+
+/* ===== LAYOUT ===== */
+.content {
+    display: flex;
+    padding: 100px;
+}
+
+.left-section {
+    flex: 1;
+    padding: 10px;
+    margin-left: -50px;
+    margin-right: 400px;
+    margin-bottom: 500px;
+    background-color: #2a3ef0;
+}
+
+.left-section h1 {
+    color: #ffffff;
+    margin-left: 10px;
+}
+
+.left-section p {
+    margin-left: 50px;
+}
+
+.left-section .shop-now {
+    padding: 10px 20px;
+    background-color: #7fcf59;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+    left: 250px;
+}
+
+.left-section img {
+    width: 300px;
+    margin-top: 20px;
+    padding: 70px;
+    margin-left: 100px;
+}
+
+/* ===== RIGHT SECTION ===== */
+.right-section {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    margin-left: -250px;
+}
+
+/* ===== SLIDESHOW ===== */
+.slideshow {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Slide track */
+.slides {
+    display: flex;
+}
+
+/* Slides */
+.slide {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+/* Images */
+.slideshow img {
+    display: none;
+    width: 100%;
+    max-width: 900px;   /* responsive instead of fixed 1000px */
+    height: auto;
+    border-radius: 20px; /* cleaner than 100px */
+    margin: 0 auto;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Active slide */
+.slideshow img.active {
+    display: block;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+/* Buttons */
+.slide-buttons {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.slide-buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.slide-buttons button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* ===== NAV BUTTONS ===== */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+/* ===== DOTS ===== */
+.dots {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #7fcf59;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0018f9;
+    padding: 10px 20px;
+}
+
+header nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+header nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: black;
+    font-weight: bold;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdf6e4;
+    padding: 10px 20px;
+}
+
+.nav-left button,
+.nav-right button {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 14px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.nav-left button:hover,
+.nav-right a:hover {
+    text-decoration: underline;
+    transform: translateY(-10px);
+}
+
+.nav-right input {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.nav-right .icon-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nav-right a {
+    font-size: 14px;
+    color: rgb(236, 14, 14);
+    text-decoration: none;
+}

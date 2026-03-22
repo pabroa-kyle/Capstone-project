@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="shortcut icon" href="cec_logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="homePage.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-left">
+          <img class="logo" src="cec_logo.jpg" alt="error photo!" />
+          <button><a href="first.html">HOME PAGE</a></button>
+          <button><a href="second.html">PRODUCTS</a></button>
+          <button><a href="about.html">ABOUT US</a></button>
+          <button><a href="contact.html">CONTACT US</a></button>
+        </div>
+      </nav>
+    </header>
+    <!-- Main Content -->
+    <main class="content">
+      <!-- Left Section -->
+      <section class="left-section">
+        <h1>Buy our products here in CEC Online Shop</h1>
+        <p>
+          Here at Space Chips, we have special options especially for you all
+          dear buyers.
+        </p>
+        <a href="productPage.html">
+          <button class="shop-now">
+            <span>Shop Now!</span>
+          </button>
+        </a>
+      </section>
+
+      <!-- Right Section -->
+      <section class="right-section">
+        <div class="slideshow">
+          <div class="slides">
+            <img src="cecpeuniform.jpeg" class="slide" />
+            <img src="nstpuniform.jpg" class="slide" />
+            <img src="schoollace.png" class="slide" />
+            <img src="schooluniform.jpeg" class="slide" />
+          </div>
+
+          <!-- Buttons -->
+          <button id="prev" class="nav-button">❮</button>
+          <button id="next" class="nav-button">❯</button>
+        </div>
+
+        <div class="dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </section>
+    </main>
+    <script src="homePage.js"></script>
+  </body>
+</html>
