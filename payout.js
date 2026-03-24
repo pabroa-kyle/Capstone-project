@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let total = localStorage.getItem("checkoutTotal");
     let cart = JSON.parse(localStorage.getItem("checkoutCart")) || [];
 
+    // 🔥 Get logged-in user
+    const customerName = localStorage.getItem("studentName") || "Guest";
+
     // Safety check
     if (!total || cart.length === 0) {
         alert("No checkout data found. Please checkout from cart first.");
@@ -40,15 +43,22 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
 
         const method = paymentMethod.value;
-        const accountNumber = document.getElementById("e-money-account")?.value || "";
-        const accountName = document.getElementById("account-name")?.value || "";
+        const accountNumber = document.getElementById("e-money-account")?.value.trim() || "";
+        const accountName = document.getElementById("account-name")?.value.trim() || "";
 
+        // ✅ VALIDATION
         if (!method) {
             alert("Please select payment method.");
             return;
         }
 
+        if (method === "e-money" && (!accountNumber || !accountName)) {
+            alert("Please enter E-Money account details.");
+            return;
+        }
+
         const paymentData = {
+            customerName: customerName, // ✅ NEW (important)
             paymentMethod: method,
             accountNumber: accountNumber,
             cardName: accountName,
@@ -67,24 +77,34 @@ document.addEventListener("DOMContentLoaded", () => {
                 body: JSON.stringify(paymentData)
             });
 
-            const result = await response.json();
+            // ✅ SAFE JSON PARSE
+            let result = {};
+            try {
+                result = await response.json();
+            } catch {
+                result = { message: "Invalid server response" };
+            }
 
             if (!response.ok) {
-                alert(result.message);
+                alert(result.message || "Payment failed");
                 return;
             }
 
-            alert(result.message);
+            alert(result.message || "Payment successful!");
 
+            // ✅ CLEAR DATA
             localStorage.removeItem("checkoutCart");
             localStorage.removeItem("checkoutTotal");
+
+            // OPTIONAL: keep user logged in
+            // localStorage.removeItem("studentLoggedIn");
 
             window.location.href = "thankyou.html";
 
         } catch (error) {
 
             console.error("Payment error:", error);
-            alert("Server connection failed");
+            alert("Server connection failed. Make sure backend is running.");
 
         }
 

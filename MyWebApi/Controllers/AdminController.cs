@@ -12,18 +12,20 @@ public class AdminController : ControllerBase
 
     // ✅ UPDATE STATUS
     [HttpPost("update-status")]
-    public IActionResult UpdateStatus([FromBody] dynamic data)
+public IActionResult UpdateStatus([FromBody] UpdateStatusRequest request)
+{
+    if (request == null)
     {
-        int index = data.index;
-        string status = data.status;
-
-        if (index < 0 || index >= OrderStore.Orders.Count)
-        {
-            return BadRequest(new { message = "Invalid order index" });
-        }
-
-        OrderStore.Orders[index].Status = status;
-
-        return Ok(new { message = "Status updated" });
+        return BadRequest(new { message = "Request is null" });
     }
+
+    if (request.Index < 0 || request.Index >= OrderStore.Orders.Count)
+    {
+        return BadRequest(new { message = "Invalid index" });
+    }
+
+    OrderStore.Orders[request.Index].Status = request.Status;
+
+    return Ok(new { message = "Status updated" });
+}
 }
